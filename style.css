@@ -1,0 +1,186 @@
+:root {
+    --bg: #FFFFF7;
+    
+}
+
+
+
+
+body {
+    background: var(--bg);
+}
+
+* { 
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0px;
+    background: var(--bg)
+}
+nav {
+    margin: auto; 
+    width: 90%;
+    display: flex;   
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    color: var(--bg);
+}
+
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section h2 {
+    font-size: 5rem;
+}
+
+.home{
+    background-image: url("livingstill.gif");    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.viewerContainer{
+
+    display: none;
+}
+
+.about{
+
+}
+
+.resume{
+    
+}
+img {
+    border-radius: 30px;
+    border: 1px solid lightgrey;
+    max-width: 80%
+    
+}
+.contact{
+
+}
+
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: red;
+}
+
+.logo{
+    color: black;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;        
+}
+.nav-links a{
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.nav-links li{
+    list-style: none;
+}
+.burger {
+    display: none;
+}
+.burger div{
+    width: 27px;
+    height: 3px;
+    background-color: black;
+    margin: 7px;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1080px){
+    .nav-links{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body {
+        overflow-x: hidden;
+        
+        
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: var(--bg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+    transition: transform 0.5s ease-out;
+}
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-7px,7px);
+}
+
+.toggle .line2{
+    transform: translate(30px,0px);
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-7px,-7px);
+}
