@@ -6,8 +6,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
         <link href="style.css" type="text/css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
         <title> Andrew Fila </title>
 
     </head>
@@ -18,13 +20,15 @@
         <header>
             <nav>
                 <div class="logo">
-                    <h4>Andrew Fila</h4>
+                    <h2>Andrew Fila</h2>
                 </div>
+
                 <ul class="nav-links">
-                    <li><a data-page="home" href="#home">HOME</a></li>
-                    <li><a data-page="about" href="#about">ABOUT</a></li>
-                    <li><a data-page="resume" href="#resume">RESUME</a></li>
-                    <li><a data-page="contact" href="#contact">CONTACT</a></li>
+                    <li><a class="link" data-page="home" href="#home">HOME</a></li>
+                    <li><a class="link" data-page="about" href="#about">ABOUT</a></li>
+                    <li><a class="link" data-page="education" href="#education">EDUCATION</a></li>
+                    <li><a class="link" data-page="techSkills" href="#tech-skills">TECHNICAL SKILLS</a></li>
+                    <li><a class="link" data-page="contact" href="#contact">CONTACT</a></li>
 
                 </ul>
                 <div class="burger">
@@ -35,23 +39,147 @@
                 </div>
             </nav>
         </header>
+
+
+
+
+
+
+
         <main>
-            <section id="home" data-index="0" class="home">
-                <div>
-                    <h2>Andrew Fila</h2>
-                    <h3>Computer Science student at</h3>
-                    <h3>Michigan Technological University</h3> 
+
+
+            <!--****************************** START ******************************-->
+
+
+            <section id="home" data-index="0" class="anchor">
+                <div class="space"></div>
+                <div class="title-card">
+                    <div class="title">
+                        <h2>Andrew Fila</h2>
+                    </div>
+                    <div class="home-abt">
+                        <h3>Computer Science Student at</h3>
+                        <h3>Michigan Technological University</h3>
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div class="social">
+                    <div class="social-box">
+                        <ul>
+                            <li><a href="https://github.com/AndrewFila" target="_blank"><i class="fa fa-github fa-3x"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/andrew-fila/" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </section>
+
+            <!--****************************** ABOUT ******************************-->
+
+            <section id="about" data-index="1" class="anchor">
+                <div class="picture"><!--<img src=""><img>--></div>
+                <h1>About</h1>
+                <div class="abt">
+                    <p>Andrew Fila is a senior Computer Science student at Michigan Technological University with minors in Mathematics and Psychology.</p>
+                    <p></p>
                 </div>
             </section>
-            <section id="about" data-index="1" class="about">
-                <h2>About</h2>
+
+
+
+
+            <!--****************************** EDUCATION ******************************-->
+
+
+            <section id="education" data-index="2" class="anchor">
+                <h1>Education</h1>
+                <div class="edu-container">
+                    <div class=img-container>
+                        <img src="img/full-color.png"></img> 
+                    </div>
+                    <div class="deg-container">
+                        <h2>B.S. Computer Science</h2>
+                        <h3>m. Psychology</h3>
+                        <h3>m. Mathematical Sciences</h3>
+                        <h3>Expected Graduation -- Spring 2021</h3>
+                    </div>
+                </div>
+
+
+
+            </section>   
+
+
+
+
+
+
+            <!--****************************** TECH SKILLLS ******************************-->
+
+
+            <section id="tech-skills" data-index="3" class="anchor">
+                <h1>technical skills</h1>
+                <p> Andrew has skills in both front-end and back-end programing with experience in many programing languages. He is also very well versed in using Linux and his workfow involves using vim in combination with the command line. He is also comfterble with technologies such as git for code management and team tools such as agile. 
+                </p>
+                <div class="tech">
+                    <div>
+                        <h2>programing</h2>
+                        <ul>
+                            <li>C/C++</li>
+                            <li>Java</li>
+                            <li>C#</li>
+                            <li>Python</li>
+                            <li>Assembly</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>scripting</h2>
+                        <ul>
+                            <li>Bash</li>
+                            <li>JavaScript</li>
+
+                        </ul>
+
+                    </div>
+                    <div>
+                        <h2>markup</h2>
+                        <ul>
+                            <li>LaTeX</li>
+                            <li>HTML/CSS</li>
+
+                        </ul>
+
+                    </div>
+                </div>
             </section>
-            <section id="resume" data-index="2" class="resume">
-                <img src="resume-1.png"></img>
-            </section>
-            <section id="contact" data-index="3" class="contact">
-                <h3>Contact</h3>
-                    
+
+            <!--****************************** CONTACT ******************************-->
+
+            <section id="contact" data-index="4" class="anchor">
+                <h1>Contact</h1>
+                <div class="contact-form">
+                    <form id="contact-form" method="post" action="contact-form.php">
+                        <h3>Send Me A Message</h3>
+                        <div class="txtbx">
+                            <label>Full Name:</label>
+                            <input type="text" name="name" value="" placeholder="Enter Your Name" required><br>
+                        </div>
+                        <div class="txtbx">
+                            <label>Email:</label>
+                            <input type="text" name="email" value="" placeholder="Enter Your Email" required><br>
+                        </div>
+                        <div class="txtbx">
+                            <label>Message:</label>
+                            <textarea name="message" class="form-control" placeholder="" required></textarea>
+                        </div>
+                        <input type="submit" class="btn" value="SEND"></input>
+                </div>        
+                <div class="social-box">
+                        <ul>
+                            <li><a href="https://github.com/AndrewFila" target="_blank"><i class="fa fa-github fa-3x"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/andrew-fila/" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
+                        </ul>
+                    </div>
             </section>
 
         </main>

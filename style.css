@@ -1,112 +1,263 @@
 :root {
-    --bg: #FFFFF7;
-    
+    --bg: #fff;
+    --txt: #000;
 }
-
-
-
-
-body {
-    background: var(--bg);
-}
-
-* { 
-    margin: 0; 
+* {
+    margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
+.top {
+    position: fixed;
 
-header {
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
-    position: sticky;
-    top: 0px;
-    background: var(--bg)
 }
-nav {
-    margin: auto; 
-    width: 90%;
-    display: flex;   
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    color: var(--bg);
-}
-
-
 section {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+main {
+}
+.anchor {
+    padding-top: 8vh;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    background: black;
+    color: white;
+    padding: 1vh;
+    border-radius: 10px;
+}
+
+/* ************************************** nav bar ************************************** */
+header {
+    position: sticky;
+    top: 0vh;
+    width: 100%;
+    height: 7vh;
+    background: black;
+}
+nav {
+    width: 90%;
+    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-section h2 {
-    font-size: 5rem;
-}
-
-.home{
-    background-image: url("livingstill.gif");    
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.viewerContainer{
-
-    display: none;
-}
-
-.about{
-
-}
-
-.resume{
-    
-}
-img {
-    border-radius: 30px;
-    border: 1px solid lightgrey;
-    max-width: 80%
-    
-}
-.contact{
-
-}
-
-
-.title{
+.logo {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: red;
-}
-
-.logo{
-    color: black;
-    letter-spacing: 2px;
-    font-size: 30px;
+    width: 50%;
+    color: white;
+    padding-left: 3rem;
 }
 .nav-links {
     display: flex;
-    justify-content: space-around;
-    width: 35%;        
+    width: 50%;
+    justify-content: space-between;
 }
-.nav-links a{
-    color: black;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
-}
+
+
 .nav-links li{
     list-style: none;
 }
+.nav-links a{
+    text-decoration: none;
+    color: white;
+}
+
+.link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.link:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+/* ************************************ home ************************************* */
+#home {
+    padding-top: 0vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(img/forest.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.title-card {
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-card h2{
+    font-size: 3rem;
+    height: 10vh;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #000;
+    border-radius: 10px;
+}
+.home-abt {
+    font-size: 1.2em;
+    padding: 2vh;
+    top: 63vh;
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+.space {
+    height: 20vh;
+}
+.social {
+    width: 90%;
+    display: flex;
+}
+.social-box ul{
+    display: flex;
+    justify-content: space-around;
+}
+.social-box li{
+    list-style: none;
+    padding: .5em;
+    margin: .5em;
+    background: black;
+    border-radius: 10px;
+}
+.social-box a{
+    text-decoration: none;
+    color: white;
+}
+/* ************************************ about ************************************ */
+/* ************************************ education ************************************ */
+#education {
+    display: flex;
+    justify-content: space-around;
+}
+
+.edu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.edu-container img{
+    height: 30vh;
+    padding-right: 3rem;
+}
+.edu-container h2 {
+    font-size: 2rem;
+}
+
+/* ************************************ Tech Skills ************************************ */
+#tech-skills {
+    display: flex;
+    justify-content: space-around;
+}
+#tech-skills p{
+    font-size: 1.3em;
+    width: 70%;
+}
+.tech {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+.tech li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tech h2{
+    text-transform: uppercase;
+    font-size: 2em;
+}
+/* ************************************ Contact ************************************ */
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-form {
+    background-color: black;
+    border-radius: 10px;
+    width: 70%;
+    padding: 30px 40px;
+    text-align: center;
+}
+.contact-form h3{
+    margin-top: 0;
+    font-size: 2rem;
+    padding-bottom: 1.5vh;
+    color: white;
+}
+.txtbx{
+    border: 1px solid white;
+    margin: 1vh;
+    padding: 2vh;
+    border-radius: 10px;
+}
+.txtbx label{
+    display: block;
+    text-align: left;
+    color: #333;
+    font-size: 1.25rem;
+    color: white;
+}
+.txtbx input, .txtbx textarea{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    margin: top;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    background: #72ab82;
+    padding: 1.5vh 0;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 40%;
+}
+
+
+
+/* ************************************ Burger ************************************ */
+
+
 .burger {
     display: none;
 }
 .burger div{
     width: 27px;
     height: 3px;
-    background-color: black;
+    background-color: white;
     margin: 7px;
     transition: all 0.3s ease;
 }
@@ -123,7 +274,7 @@ img {
 
 @media screen and (max-width: 1080px){
     .nav-links{
-        width: 50%;
+        width: 90%;
     }
 }
 
@@ -133,17 +284,24 @@ img {
         
         
     }
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
     .nav-links{
+        overflow-x: hidden;
+        width: 60%;
         position: absolute;
         right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: var(--bg);
+        height: 93vh;
+        top: 7vh;
+        justify-content: space-around;
+        background-color: black;
         display: flex;
         flex-direction: column;
         align-items: center;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.5s ease;
 
     }
     .nav-links li{
@@ -152,6 +310,7 @@ img {
     .burger{
         display: block;
         cursor: pointer;
+        color: white;
     }
 }
 
@@ -183,4 +342,6 @@ img {
 
 .toggle .line3{
     transform: rotate(45deg) translate(-7px,-7px);
+}{
+    display: none;
 }
