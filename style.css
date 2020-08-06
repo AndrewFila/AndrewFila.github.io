@@ -198,7 +198,7 @@ nav {
 }
 #education h1 {
     margin-bottom: 17vh;
-    margin-top: 10vh;
+    margin-top: vh;
 }
 
 .edu-container {
@@ -207,25 +207,18 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
 }
-#GoHuskies {
-    z-index: 0;
-    
-    width: 60vw;
+#GoHuskies {    
     height: 60vh;
-    align-self: center;
+
 }
 #GoHuskies img{
     height: 100%;
-    padding-left: 30vw;
-    height: 100%;
-
 }
 .img-container {
     height: 20vw;
-    width: 20vh;
-    padding-left: 70%;
+    padding-left: 45%;
 }
 .img-container img{
     height: 100%;
@@ -234,7 +227,7 @@ nav {
 
 .edu-container{
     padding-top: 0vh;
-    padding-right: 30%;
+
     
 }
 #deg-container {
@@ -242,7 +235,7 @@ nav {
     color: white;
     padding: 2vh; 
     border-radius: 10px;
-    margin-right: 10%;
+    margin-right: 45%;
 }
 #deg-container h2{
     font-size: 2rem;
