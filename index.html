@@ -52,20 +52,20 @@
             <!--****************************** START ******************************-->
 
 
-            <section id="home" data-index="0" class="anchor">
+            <section id="home" data-index="0" class="scroll" data-direction="vertical" data-rate="-.4">
                 <div class="space"></div>
-                <div class="title-card">
-                    <div class="title">
+                <div id="title-card">
+                    <div id="title" class="scroll" data-direction="vertical" data-rate="-.5">
                         <h2>Andrew Fila</h2>
                     </div>
-                    <div class="home-abt">
+                    <div class="scroll" data-direction="vertical" data-rate="-.5" id="home-abt">
                         <h3>Computer Science Student at</h3>
                         <h3>Michigan Technological University</h3>
                     </div>
                 </div>
                 <div class="space"></div>
-                <div class="social">
-                    <div class="social-box">
+                <div  class="social">
+                    <div class="scroll" data-rate="-.3" data-direction="vertical" id="social-box">
                         <ul>
                             <li><a href="https://github.com/AndrewFila" target="_blank"><i class="fa fa-github fa-3x"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/andrew-fila/" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
@@ -76,13 +76,18 @@
 
             <!--****************************** ABOUT ******************************-->
 
-            <section id="about" data-index="1" class="anchor">
-                <div class="picture"><!--<img src=""><img>--></div>
+            <section id="about" data-rate="-.2" data-direction="vertical" class="scroll" data-index="1">
                 <h1>About</h1>
-                <div class="abt">
-                    <p>Andrew Fila is a senior Computer Science student at Michigan Technological University with minors in Mathematics and Psychology.</p>
-                    <p></p>
-                </div>
+ 
+                    <div id="picture">
+                        <img src="img/me.jpg" class="scroll" data-rate="-.2" data-direction="vertical"><img>
+                    </div>
+                    <div class="scroll" data-rate="-.1" data-direction="vertical" id="abt">
+                        <p>Andrew Fila is a senior Computer Science student at Michigan Technological University with minors in Mathematics and Psychology.</p>
+                        <p>Outside of school Andrew enjoys spending time in nature, camping, hiking, and rockclimbing during the summer and snowboarding during the winter. </p>
+                        
+                    </div>
+
             </section>
 
 
@@ -91,13 +96,17 @@
             <!--****************************** EDUCATION ******************************-->
 
 
-            <section id="education" data-index="2" class="anchor">
+            <section id="education" data-index="2" class="scroll" data-direction="vertical" data-rate="-.2">
                 <h1>Education</h1>
                 <div class="edu-container">
                     <div class=img-container>
-                        <img src="img/full-color.png"></img> 
+                        <img src="img/MTUseal.png" class="scroll" data-direction="vertical" data-rate="-.1"></img> 
                     </div>
-                    <div class="deg-container">
+                    <div class="scroll" data-rate="-.3" data-direction="vertical" id="GoHuskies">
+                        <img src="img/GoHuskies.jpg"></img>
+                    </div>
+                    
+                    <div id="deg-container" class="scroll" data-rate="-.5" data-direction="vertical">
                         <h2>B.S. Computer Science</h2>
                         <h3>m. Psychology</h3>
                         <h3>m. Mathematical Sciences</h3>
@@ -117,7 +126,7 @@
             <!--****************************** TECH SKILLLS ******************************-->
 
 
-            <section id="tech-skills" data-index="3" class="anchor">
+            <section id="tech-skills" data-index="3" class="scroll" data-direction="vertical" data-rate="-.2">
                 <h1>technical skills</h1>
                 <p> Andrew has skills in both front-end and back-end programming with experience in many programming languages. He is also very well versed in using Linux and his workflow involves using vim in combination with the command line. He is also experienced with technologies such as git for code management and team tools such as agile. 
                 </p>
@@ -155,10 +164,10 @@
 
             <!--****************************** CONTACT ******************************-->
 
-            <section id="contact" data-index="4" class="anchor">
+            <section id="contact" data-index="4" class="scroll" data-rate="-.2" data-direction="vertical">
                 <h1>Contact</h1>
-                <div class="contact-form">
-                    <form id="contact-form" method="post" action="contact-form.php">
+                <div id="contact-form">
+                    <form id="contact-form-php" method="post" action="contact-form.php">
                         <h3>Send Me A Message</h3>
                         <div class="txtbx">
                             <label>Full Name:</label>
@@ -174,16 +183,35 @@
                         </div>
                         <input type="submit" class="btn" value="SEND"></input>
                 </div>        
-                <div class="social-box">
+                <div id="social-box">
                         <ul>
                             <li><a href="https://github.com/AndrewFila" target="_blank"><i class="fa fa-github fa-3x"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/andrew-fila/" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
                         </ul>
                     </div>
             </section>
+            <div id="bottom">
+                <div id="box1" class="scroll" data-direction="vertical" data-rate=""></div>
 
+            </div>
         </main>
+        <script>
+            window.addEventListener('scroll', function(e) {
+                const target = document.querySelectorAll('.scroll');
 
+                var index = 0, length = target.length;
+                for (index; index < length; index++) {
+                    var pos = window.pageYOffset * target[index].dataset.rate;
+
+                    if(target[index].dataset.direction === 'vertical'){
+                        target[index].style.transform = 'translate3d(0px, '+pos+'px, 0px)';
+                    }else{
+                        target[index].style.transform = 'translate3d(0px, '+pos+'px, 0px)';
+                        target[index].style.transform = 'translate3d('+pos+'px, 0px, 0px)';
+                    }
+                }
+            }); 
+        </script>
         <script src="js/main.js"></script>
     </body>
 

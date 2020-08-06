@@ -33,10 +33,12 @@ h1 {
     color: white;
     padding: 1vh;
     border-radius: 10px;
+    z-index: 1;
 }
 
 /* ************************************** nav bar ************************************** */
 header {
+    z-index: 998;
     position: sticky;
     top: 0vh;
     width: 100%;
@@ -44,6 +46,7 @@ header {
     background: black;
 }
 nav {
+    z-index: 999;
     width: 90%;
     height: 100%;
     display: flex;
@@ -87,7 +90,7 @@ nav {
 
 /* ************************************ home ************************************* */
 #home {
-    padding-top: 0vh;
+    padding-top: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,17 +100,17 @@ nav {
     background-size: cover;
     width: 100%;
 }
-.title-card {
+#title-card {
     display: flex;
     flex-direction: column;
     height: 25vh;
     justify-content: space-between;
     align-items: center;
 }
-.title-card h2{
-    font-size: 3rem;
-    height: 10vh;
-    width: 20rem;
+#title{
+    z-index: 0;
+    font-size: 3rem; 
+    padding: 2vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,7 +118,7 @@ nav {
     background-color: #000;
     border-radius: 10px;
 }
-.home-abt {
+#home-abt {
     font-size: 1.2em;
     padding: 2vh;
     top: 63vh;
@@ -130,41 +133,121 @@ nav {
     width: 90%;
     display: flex;
 }
-.social-box ul{
+#social-box ul{
     display: flex;
     justify-content: space-around;
 }
-.social-box li{
+#social-box li{
     list-style: none;
     padding: .5em;
     margin: .5em;
     background: black;
     border-radius: 10px;
 }
-.social-box a{
+#social-box a{
     text-decoration: none;
     color: white;
 }
 /* ************************************ about ************************************ */
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30vh;
+}
+#about h1{
+    
+    z-index: 1;
+    background-color: black;
+    align-self: flex-start;
+    margin-left: 15vw;
+}
+
+
+
+#picture {
+    align-self: center;
+    width: 50vw;
+    height: 50vh;
+
+}
+#picture img{
+    filter: grayscale(90%);
+    height: 170%;
+}
+#abt {
+   align-self: end;
+   padding-right: 5vw;
+   width: 50vw;
+}
+#abt p {   
+    color: white;
+    background-color: black;
+    
+    padding: 2vh;
+    border-radius: 10px;
+
+}
+
 /* ************************************ education ************************************ */
 #education {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding-top: 30vh;
+}
+#education h1 {
+    margin-bottom: 17vh;
+    margin-top: 10vh;
 }
 
 .edu-container {
+    padding-top: 70vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90%;
 }
-
-.edu-container img{
-    height: 30vh;
-    padding-right: 3rem;
+#GoHuskies {
+    z-index: 0;
+    
+    width: 60vw;
+    height: 60vh;
+    align-self: center;
 }
-.edu-container h2 {
+#GoHuskies img{
+    height: 100%;
+    padding-left: 30vw;
+    height: 100%;
+
+}
+.img-container {
+    height: 20vw;
+    width: 20vh;
+    padding-left: 70%;
+}
+.img-container img{
+    height: 100%;
+    z-index: 2;
+}
+
+.edu-container{
+    padding-top: 0vh;
+    padding-right: 30%;
+    
+}
+#deg-container {
+    background: black;
+    color: white;
+    padding: 2vh; 
+    border-radius: 10px;
+    margin-right: 10%;
+}
+#deg-container h2{
     font-size: 2rem;
+    z-index: 3;
+    
 }
 
 /* ************************************ Tech Skills ************************************ */
@@ -200,14 +283,14 @@ nav {
     align-items: center;
 }
 
-.contact-form {
+#contact-form {
     background-color: black;
     border-radius: 10px;
     width: 70%;
     padding: 30px 40px;
     text-align: center;
 }
-.contact-form h3{
+#contact-form h3{
     margin-top: 0;
     font-size: 2rem;
     padding-bottom: 1.5vh;
@@ -261,9 +344,6 @@ nav {
     margin: 7px;
     transition: all 0.3s ease;
 }
-
-
-
 
 
 
@@ -342,6 +422,5 @@ nav {
 
 .toggle .line3{
     transform: rotate(45deg) translate(-7px,-7px);
-}{
-    display: none;
 }
+
