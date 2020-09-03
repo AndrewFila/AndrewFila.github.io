@@ -24,11 +24,11 @@
                 </div>
 
                 <ul class="nav-links">
-                    <li><a class="link" data-page="home" href="#home">HOME</a></li>
-                    <li><a class="link" data-page="about" href="#about">ABOUT</a></li>
-                    <li><a class="link" data-page="education" href="#education">EDUCATION</a></li>
-                    <li><a class="link" data-page="techSkills" href="#tech-skills">TECHNICAL SKILLS</a></li>
-                    <li><a class="link" data-page="contact" href="#contact">CONTACT</a></li>
+                    <li><a class="home-link link" data-page="home" href="#home">HOME</a></li>
+                    <li><a class="abt-link link" data-page="about" href="#about">ABOUT</a></li>
+                    <li><a class="edu-link link" data-page="education" href="#education">EDUCATION</a></li>
+                    <li><a class="ts-link link" data-page="techSkills" href="#tech-skills">TECHNICAL SKILLS</a></li>
+                    <li><a class="cont-link link" data-page="contact" href="#contact">CONTACT</a></li>
 
                 </ul>
                 <div class="burger">
@@ -52,42 +52,53 @@
             <!--****************************** START ******************************-->
 
 
-            <section id="home" data-index="0" class="scroll" data-direction="vertical" data-rate="-.4">
+            <section id="home" data-index="0" class="scroll">
+                
                 <div class="space"></div>
+                
                 <div id="title-card">
-                    <div id="title" class="scroll" data-direction="vertical" data-rate="-.5">
+                    
+                    <div id="title" class="scroll">
                         <h2>Andrew Fila</h2>
                     </div>
-                    <div class="scroll" data-direction="vertical" data-rate="-.5" id="home-abt">
+                    
+                    <div class="scroll" id="home-abt">
                         <h3>Computer Science Student at</h3>
                         <h3>Michigan Technological University</h3>
                     </div>
+                
                 </div>
+                
                 <div class="space"></div>
+                
                 <div  class="social">
-                    <div class="scroll" data-rate="-.3" data-direction="vertical" id="social-box">
+                    
+                    <div class="scroll" id="social-box">
+                    
                         <ul>
                             <li><a href="https://github.com/AndrewFila" target="_blank"><i class="fa fa-github fa-3x"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/andrew-fila/" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
                         </ul>
+                    
                     </div>
+                
                 </div> 
             </section>
 
             <!--****************************** ABOUT ******************************-->
 
-            <section id="about" data-rate="-.2" data-direction="vertical" class="scroll" data-index="1">
+            <section id="about"  data-index="1">
                 <h1>About</h1>
- 
+                 <div id="abt-container">
                     <div id="picture">
-                        <img src="img/me.jpg" class="scroll" data-rate="-.2" data-direction="vertical"><img>
+                        <img src="img/me.jpg" class="scroll"><img>
                     </div>
-                    <div class="scroll" data-rate="-.1" data-direction="vertical" id="abt">
+                    <div class="scroll" id="abt">
                         <p>Andrew Fila is a senior Computer Science student at Michigan Technological University with minors in Mathematics and Psychology.</p>
                         <p>Outside of school Andrew enjoys spending time in nature, camping, hiking, and rockclimbing during the summer and snowboarding during the winter. </p>
                         
                     </div>
-
+                </div>
             </section>
 
 
@@ -96,26 +107,30 @@
             <!--****************************** EDUCATION ******************************-->
 
 
-            <section id="education" data-index="2" class="scroll" data-direction="vertical" data-rate="-.2">
+            <section id="education" data-index="2" class="scroll">
+                
                 <h1>Education</h1>
-                <div class="edu-container">
-                    <div class=img-container>
-                        <img src="img/MTUseal.png" class="scroll" data-direction="vertical" data-rate="-.1"></img> 
+                
+                <div id="edu-container">    
+
+
+                    <div class="scroll" id="GoHuskies">
+                        <img src="img/husky-gallery.png"></img>
                     </div>
-                    <div class="scroll" data-rate="-.3" data-direction="vertical" id="GoHuskies">
-                        <img src="img/GoHuskies.jpg"></img>
-                    </div>
-                    
-                    <div id="deg-container" class="scroll" data-rate="-.5" data-direction="vertical">
-                        <h2>B.S. Computer Science</h2>
-                        <h3>m. Psychology</h3>
-                        <h3>m. Mathematical Sciences</h3>
-                        <h3>Expected Graduation -- Spring 2021</h3>
+
+
+                    <div id="mtu">
+                        <h4>Michigan Technological University</h2> 
+
+                        <div id="deg-container" class="scroll">
+
+                            <h2>B.S. Computer Science</h2>
+                            <h3>m. Psychology</h3>
+                            <h3>m. Mathematical Sciences</h3>
+                            <h3>Expected Graduation -- Spring 2021</h3>
+                        </div>
                     </div>
                 </div>
-
-
-
             </section>   
 
 
@@ -126,7 +141,7 @@
             <!--****************************** TECH SKILLLS ******************************-->
 
 
-            <section id="tech-skills" data-index="3" class="scroll" data-direction="vertical" data-rate="-.2">
+            <section id="tech-skills" data-index="3" class="scroll">
                 <h1>technical skills</h1>
                 <p> Andrew has skills in both front-end and back-end programming with experience in many programming languages. He is also very well versed in using Linux and his workflow involves using vim in combination with the command line. He is also experienced with technologies such as git for code management and team tools such as agile. 
                 </p>
@@ -164,7 +179,7 @@
 
             <!--****************************** CONTACT ******************************-->
 
-            <section id="contact" data-index="4" class="scroll" data-rate="-.2" data-direction="vertical">
+            <section id="contact" data-index="4" class="scroll">
                 <h1>Contact</h1>
                 <div id="contact-form">
                     <form id="contact-form-php" method="post" action="contact-form.php">
@@ -210,8 +225,10 @@
                         target[index].style.transform = 'translate3d('+pos+'px, 0px, 0px)';
                     }
                 }
+                var tgt = document.querySelector('#home')                
             }); 
         </script>
+        <script src="js/smoothScroll.js"></script>
         <script src="js/main.js"></script>
     </body>
 

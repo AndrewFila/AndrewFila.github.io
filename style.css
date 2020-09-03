@@ -10,23 +10,30 @@
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
+body {
+    transition: 1.5s cubic-bezier(0,.74,.36,1);
+
+}
+html {
+    -webkit-overflow-scrolling: touch;
+}
+
 .top {
     position: fixed;
 
 }
 section {
-    height: 100vh;
+    height: 93vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    scroll-behavior: smooth;
 }
 
-main {
-}
-.anchor {
-    padding-top: 8vh;
-}
+
 h1 {
+    transition: .2s;
     text-transform: uppercase;
     font-size: 4rem;
     background: black;
@@ -34,6 +41,8 @@ h1 {
     padding: 1vh;
     border-radius: 10px;
     z-index: 1;
+    align-self: flex-start;
+    margin-left: 15vw;
 }
 
 /* ************************************** nav bar ************************************** */
@@ -90,7 +99,7 @@ nav {
 
 /* ************************************ home ************************************* */
 #home {
-    padding-top: 10vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,6 +108,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+
 }
 #title-card {
     display: flex;
@@ -150,92 +160,104 @@ nav {
 }
 /* ************************************ about ************************************ */
 #about {
+    margin-top: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 30vh;
 }
 #about h1{
     
     z-index: 1;
     background-color: black;
-    align-self: flex-start;
-    margin-left: 15vw;
+    margin-bottom: 6vh;
 }
 
-
+#abt-container {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+}
 
 #picture {
-    align-self: center;
-    width: 50vw;
-    height: 50vh;
-
+    height: 60vh;
+    z-index: 1;
 }
 #picture img{
     filter: grayscale(90%);
-    height: 170%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 5%;
 }
 #abt {
-   align-self: end;
    padding-right: 5vw;
    width: 50vw;
+   z-index: 4;
+   margin-left: 3vw;
+   margin-top: 30vh;
 }
 #abt p {   
     color: white;
     background-color: black;
-    
+    z-index: 4;
     padding: 2vh;
     border-radius: 10px;
-
+    margin-bottom: 4%;
 }
 
 /* ************************************ education ************************************ */
 #education {
+    margin-top: 20vh;
     display: flex;
     justify-content: space-evenly;
-    padding-top: 30vh;
+    
 }
 #education h1 {
-    margin-bottom: 17vh;
-    margin-top: vh;
+    margin-bottom: 6vh;
 }
 
-.edu-container {
-    padding-top: 70vh;
+#edu-container {
+    
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    
 }
-#GoHuskies {    
+#GoHuskies {  
     height: 60vh;
-
 }
 #GoHuskies img{
-    height: 100%;
+   height: 100%;
 }
 .img-container {
-    height: 20vw;
-    padding-left: 45%;
+    height: 30vh;
+    align-self: flex-start;
 }
 .img-container img{
     height: 100%;
-    z-index: 2;
-}
-
-.edu-container{
-    padding-top: 0vh;
-
     
 }
+
+#mtu h4{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: 2vw;
+    background: black;
+    color: yellow;
+    border-radius: 10px;
+    padding: 2vh;
+}
+
+
 #deg-container {
+    align-self: flex-end;
     background: black;
     color: white;
     padding: 2vh; 
+    margin: 5vh;
     border-radius: 10px;
-    margin-right: 45%;
+    max-width: 80%;
 }
 #deg-container h2{
     font-size: 2rem;
@@ -247,6 +269,7 @@ nav {
 #tech-skills {
     display: flex;
     justify-content: space-around;
+    padding-top: 30vh;
 }
 #tech-skills p{
     font-size: 1.3em;
@@ -266,6 +289,11 @@ nav {
 .tech h2{
     text-transform: uppercase;
     font-size: 2em;
+    padding: 1vh;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 2vh;
+    background: black;
 }
 /* ************************************ Contact ************************************ */
 
@@ -274,8 +302,11 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding-top: 30vh;
 }
-
+#contact h1 {
+    margin-bottom: 5vh;
+}
 #contact-form {
     background-color: black;
     border-radius: 10px;
@@ -349,13 +380,32 @@ nav {
     .nav-links{
         width: 90%;
     }
+    .img-container{
+        width: 110%;
+        padding-left: 60%;
+        padding-bottom: 10vh;
+    }
+    #GoHuskies {
+        padding-bottom: 9vh;
+
+    }
+    #deg-container{
+        max-width: 45%;
+    }
+    #deg-container h2{
+        font-size: 1.2rem;
+    }
+    #deg-container h3{
+        font-size: ;
+    }
 }
 
 @media screen and (max-width: 768px){
     body {
         overflow-x: hidden;
         width: 100%; 
-        
+        display: flex; 
+        flex-direction: column;
     }
     nav {
         display: flex;
