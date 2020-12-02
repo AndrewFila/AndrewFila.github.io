@@ -119,7 +119,7 @@ nav {
 }
 #title{
     z-index: 0;
-    font-size: 3rem; 
+    font-size: 3rem;
     padding: 2vh;
     display: flex;
     justify-content: center;
@@ -167,7 +167,7 @@ nav {
     align-items: center;
 }
 #about h1{
-    
+
     z-index: 1;
     background-color: black;
     margin-bottom: 6vh;
@@ -196,7 +196,7 @@ nav {
    margin-left: 3vw;
    margin-top: 30vh;
 }
-#abt p {   
+#abt p {
     color: white;
     background-color: black;
     z-index: 4;
@@ -210,21 +210,21 @@ nav {
     margin-top: 20vh;
     display: flex;
     justify-content: space-evenly;
-    
+
 }
 #education h1 {
     margin-bottom: 6vh;
 }
 
 #edu-container {
-    
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
+
 }
-#GoHuskies {  
+#GoHuskies {
     height: 60vh;
 }
 #GoHuskies img{
@@ -236,7 +236,7 @@ nav {
 }
 .img-container img{
     height: 100%;
-    
+
 }
 
 #mtu h4{
@@ -254,7 +254,7 @@ nav {
     align-self: flex-end;
     background: black;
     color: white;
-    padding: 2vh; 
+    padding: 2vh;
     margin: 5vh;
     border-radius: 10px;
     max-width: 80%;
@@ -262,7 +262,7 @@ nav {
 #deg-container h2{
     font-size: 2rem;
     z-index: 3;
-    
+
 }
 
 /* ************************************ Tech Skills ************************************ */
@@ -377,6 +377,9 @@ nav {
 
 
 @media screen and (max-width: 1080px){
+    html {
+        overflow-x: hidden;
+    }
     .nav-links{
         width: 90%;
     }
@@ -396,7 +399,7 @@ nav {
         font-size: 1.2rem;
     }
     #deg-container h3{
-        font-size: ;
+        font-size: 1em;
     }
 }
 
@@ -406,8 +409,8 @@ nav {
     }
     body {
         overflow-x: hidden;
-        width: 100%; 
-       
+        width: 100%;
+
     }
     nav {
         display: flex;
