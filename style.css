@@ -1,0 +1,232 @@
+:root {
+    --black:    #100F0F;
+    --white:    #EFEFEF;
+    --splash:   #9E2B25;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: FrauncesHeavy;
+    src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 800, "SOFT" 100, "WONK" 1;
+}
+@font-face {
+    font-family: FrauncesItHeavy;
+    src: url(fonts/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 800, "SOFT" 100, "WONK" 1;
+}
+
+@font-face {
+    font-family: FrauncesMed;
+    src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 400, "SOFT" 100, "WONK" 1;
+}
+@font-face {
+    font-family: FrauncesItMed;
+    src: url(fonts/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 400, "SOFT" 100, "WONK" 1;
+}
+
+@font-face {
+    font-family: FrauncesLight;
+    src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 200, "SOFT" 100, "WONK" 1;
+}
+@font-face {
+    font-family: FrauncesItLight;
+    src: url(fonts/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 200, "SOFT" 100, "WONK" 1;
+}
+html {
+    animation: 4s ease-out 0s 1 fadeToWhite;
+    font-family: 'Fraunces';
+    color: var(--black);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--splash);
+}
+nav {
+    top: 0;
+    position: fixed;
+    height: 7vh;
+    width: 99vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--splash);
+    
+}
+.logo {
+    padding-left: 10px;
+    animation: 4s ease-out 0s 1 FadeToBlack;
+    font-family: FrauncesHeavy;
+    color: var(--black);
+    font-size: 30pt;
+}
+.title {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+.title h1{
+    width: 50vw;
+    margin: none;
+    font-family: FrauncesHeavy;
+    font-size: 200pt;
+}
+.a {
+    animation: 2s ease-out 0s 1 slideLeft1;
+}
+.f {
+    animation: 2s ease-out 0s 1 slideLeft2;
+}
+.title h2{
+    animation: 4s ease-out 0s 1 slideUp;
+    color: var(--black);
+    margin-top: 20vh;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    font-family: FrauncesMed;
+    font-size: 30pt;
+}
+.title h3{
+    animation: 4s ease-out 0s 1 slideUp;
+    color: var(--splash);   
+    font-family: FrauncesItMed;
+    font-size: 20pt;
+}
+.nav-links{
+    width: 50vw;
+}
+.nav-links ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-links a{
+    color: var(--black);
+    animation: 4s ease-out 0s 1 FadeToBlack;
+    font-size: 20pt;
+    text-decoration: none;
+    font-family: FrauncesLight;
+    transition-duration: 400ms;
+    transition-property: color;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a:hover{
+    color: var(--white);
+    font-family: FrauncesItMed;
+}
+.proj{
+    font-family: FrauncesItHeavy;
+    height: 95vh;
+}
+.proj h1{
+    font-size: 35pt;
+}
+
+
+
+.cont{
+    font-family: FrauncesItHeavy;
+    height: 95vh;
+}
+.cont h1{
+    font-size: 35pt;
+}
+
+
+
+
+
+
+
+.font h1{
+    font-family: FrauncesItHeavy;
+}
+.font h2{
+    font-family: FrauncesItMed;
+}
+.font p{
+    font-family: FrauncesItLight;
+}
+
+@keyframes slideLeft1 {
+    from {
+        transform: translateX(50%);
+        color: var(--white);
+    }
+    50%{
+        transform: translateX(50%);
+        color: var(--white);
+    }
+    to {
+        transform: translateX(0%);
+        color: var(--black);
+    }
+    
+}@keyframes slideLeft2 {
+    from {
+        transform: translateX(80%);
+        color: var(--white);
+    }
+    50%{
+        transform: translateX(80%);
+        color: var(--white);
+    }
+    to {
+        transform: translateX(0%);
+        color: var(--black);
+    }
+    
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+@keyframes fadeToWhite {
+    from {
+        background-color: var(--splash);
+        overflow: hidden;
+    }
+    25%{
+        background-color: var(--splash);
+    }
+    50%{
+        overflow-y: scroll;
+    }
+    to {
+        background-color: var(--white);
+        overflow-y: scroll;
+        
+    }
+}
+@keyframes FadeToBlack {
+    from {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
