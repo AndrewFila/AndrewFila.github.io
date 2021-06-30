@@ -40,21 +40,18 @@
     font-variation-settings: "opsz" 9, "wght" 200, "SOFT" 100, "WONK" 1;
 }
 html {
-    animation: 4s ease-out 0s 1 fadeToWhite;
+    animation: 2s linear 0s 1 hideScroll;
     font-family: 'Fraunces';
     color: var(--black);
     background-color: var(--white);
     overflow-x: hidden;
 }
-body {
-    scrollbar-width: thin;
-    scrollbar-color: var(--splash);
-}
 nav {
+    animation: 2s ease-out 0s 1 fadeToRed;
     top: 0;
     position: fixed;
     height: 7vh;
-    width: 99vw;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,13 +60,14 @@ nav {
 }
 .logo {
     padding-left: 10px;
-    animation: 4s ease-out 0s 1 FadeToBlack;
+    animation: 2s ease-out 0s 1 FadeToBlack;
     font-family: FrauncesHeavy;
     color: var(--black);
     font-size: 30pt;
 }
 .title {
-    height: 100vh;
+    animation: 2s ease-out 0s 1 fadeToWhite;
+    height: 93vh;
     display: flex;
     align-items: center;
 
@@ -81,13 +79,13 @@ nav {
     font-size: 200pt;
 }
 .a {
-    animation: 2s ease-out 0s 1 slideLeft1;
+    animation: 1s ease-out 0s 1 slideLeft1;
 }
 .f {
-    animation: 2s ease-out 0s 1 slideLeft2;
+    animation: 1s ease-out 0s 1 slideLeft2;
 }
 .title h2{
-    animation: 4s ease-out 0s 1 slideUp;
+    animation: 2s ease-out 0s 1 slideUp;
     color: var(--black);
     margin-top: 20vh;
     padding-bottom: 10px;
@@ -96,7 +94,7 @@ nav {
     font-size: 30pt;
 }
 .title h3{
-    animation: 4s ease-out 0s 1 slideUp;
+    animation: 2s ease-out 0s 1 slideUp;
     color: var(--splash);   
     font-family: FrauncesItMed;
     font-size: 20pt;
@@ -107,11 +105,12 @@ nav {
 .nav-links ul{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
+    padding-right: 40px;
 }
 .nav-links a{
     color: var(--black);
-    animation: 4s ease-out 0s 1 FadeToBlack;
+    animation: 2s ease-out 0s 1 FadeToBlack;
     font-size: 20pt;
     text-decoration: none;
     font-family: FrauncesLight;
@@ -126,18 +125,46 @@ nav {
     font-family: FrauncesItMed;
 }
 .proj{
-    font-family: FrauncesItHeavy;
-    height: 95vh;
+
+    height: 93vh;
 }
 .proj h1{
+    font-family: FrauncesItHeavy;
     font-size: 35pt;
 }
 
+.abt{
+    display: block;
+    z-index: 999;
+    height: 93vh;
+    display: flex;
+}
+.abt h1{
+    font-family: FrauncesItHeavy;
+    font-size: 35pt;
+}
+.abt p{
+    font-family: FrauncesLight;
+    font-size: 20pt;
+}
+.about-pg {
+    width: 60vw;
+    padding: 100px;
+}
+.img{
+    z-index: 0;
+    width: 40vw;
+    background-color: var(--splash);
+    height: 70vh;
+    margin-top: 10vh;
+    margin-right: 10vw;
+    transform: translateX(-25%);
+}
 
 
 .cont{
     font-family: FrauncesItHeavy;
-    height: 95vh;
+    height: 93vh;
 }
 .cont h1{
     font-size: 35pt;
@@ -145,7 +172,10 @@ nav {
 
 
 
-
+.spacer {
+    width: 100%;
+    height: 7vh;
+}
 
 
 
@@ -162,11 +192,11 @@ nav {
 @keyframes slideLeft1 {
     from {
         transform: translateX(50%);
-        color: var(--white);
+        color: var(--splash);
     }
     50%{
         transform: translateX(50%);
-        color: var(--white);
+        color: var(--splash);
     }
     to {
         transform: translateX(0%);
@@ -176,11 +206,11 @@ nav {
 }@keyframes slideLeft2 {
     from {
         transform: translateX(80%);
-        color: var(--white);
+        color: var(--splash);
     }
     50%{
         transform: translateX(80%);
-        color: var(--white);
+        color: var(--splash);
     }
     to {
         transform: translateX(0%);
@@ -202,20 +232,36 @@ nav {
         opacity: 100%;
     }
 }
+@keyframes hideScroll {
+    from {
+        overflow: hidden;
+    }
+    to {
+        overflow: hidden;
+    }
+}   
 @keyframes fadeToWhite {
     from {
-        background-color: var(--splash);
+        background-color: var(--black);
         overflow: hidden;
     }
     25%{
-        background-color: var(--splash);
-    }
-    50%{
-        overflow-y: scroll;
+        background-color: var(--black);
     }
     to {
         background-color: var(--white);
-        overflow-y: scroll;
+        
+    }
+}
+@keyframes fadeToRed {
+    from {
+        background-color: var(--black);
+    }
+    25%{
+        background-color: var(--black);
+    }
+    to {
+        background-color: var(--splash);
         
     }
 }
