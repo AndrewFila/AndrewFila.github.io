@@ -325,43 +325,43 @@ html {
             list-style: none;
             font-size: 12pt;
         }
-           /*------------------- About ---------------------*/
+    /*------------------- About ---------------------*/
     
     .abt{
         height: 93vh;
+        overflow-y: hidden;
     }
     .abt div{
         height: 83vh;
     }
     .abt h1{
-        grid-area: title;
         font-family: FrauncesItHeavy;
-        font-size: 25pt;
+        font-size: 22pt;
+        width: 100%;
         height: 10vh;
         display: flex;
         align-items: center;
         padding-left: 2vw;
     }
     .abt p{
-        
         font-family: FrauncesMed;
-        font-size: 14pt;
+        font-size: 15pt;
     }
     .about-pg {
         width: 100%;
-        height: 30vh;    
+        height: 30vh;
+        display: flex;
     }
     .p {
-        grid-area: desc;
         width: 90vw;
         display: flex;
         flex-direction: column;
-        padding: 15px;
-    
+        padding: 5vw;
     }
-    .img{
-      display: none;
+    .img img{
+        display: none;
     }
+
 }
 @media (min-width:480px){ /* smartphones, android phones, landscape iphone */
     nav {
@@ -447,6 +447,53 @@ html {
         font-family: FrauncesItMed;
         font-size: 18pt;
     }
+        /*------------------- About ---------------------*/
+    
+        .abt{
+            height: 93vh;
+        }
+        .abt div{
+            height: 83vh;
+        }
+        .abt h1{
+            font-family: FrauncesItHeavy;
+            font-size: 40pt;
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            padding-left: 2vw;
+        }
+        .abt p{
+            font-family: FrauncesMed;
+            font-size: 15pt;
+        }
+        .about-pg {
+            width: 90%;
+            height: 30vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        
+        }
+        .p {
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+        
+        }
+        .img{
+            z-index: 0;        
+        }
+        .img img{
+            display: initial;
+            max-height: 50%;
+            border-radius: 10px;
+        }
+        
+        
+ 
 }
 @media (min-width:801px){ /* tablet, lanscape ipad, lo-res laptops and desktops */
     .nav-links li{
@@ -466,6 +513,143 @@ html {
         transition-duration: 400ms;
         transition-property: color;
     }
+       /*------------------- Education ---------------------*/
+    
+    
+       .edu {
+        width: 100vw;
+        margin-bottom: 100px;
+    }
+    .edu h2{
+        font-family: FrauncesHeavy;
+        padding: 10px 10px 10px 100px;
+        font-size: 25pt;
+    
+    }
+    .education{
+        font-family: FrauncesItHeavy;
+        font-size: 30pt;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+    }
+    .edu_title {
+        width: 60vw;
+        padding: 50px 10px 50px 100px;
+    }
+    .edu_title h1{
+        font-family: FrauncesHeavy;
+        font-size: 25pt;
+        
+    }
+    .edu_title h3{
+        font-family: FrauncesItLight;
+        font-size: 20pt;
+    }
+    .class_list{
+        width: 95%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    .subject {
+        font-family: FrauncesMed;
+        font-size: 18pt;
+        list-style: none;
+    }
+    .class_list li{
+        font-family: FrauncesItLight;
+        list-style: none;
+        font-size: 14pt;
+    }
+    
+    
+    /*------------------- Portfolio ---------------------*/
+    .proj{
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .proj_grid {
+        width: 90vw;
+    }
+    .proj h1{
+        font-family: FrauncesItHeavy;
+        font-size: 30pt;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+    }
+    .proj_box {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 100px auto;
+        grid-template-areas: "heading heading" 
+                             "desc tools";
+        margin-bottom: 30px;
+    }
+    .desc {
+        grid-area: desc;
+        font-family: frauncesLight;
+        font-size: 16pt;
+        margin-right: 100px;
+    }
+    .desc a{
+        color: black;
+    }
+    .tools {
+        grid-area: tools;
+    }
+    
+    .tools li {
+        list-style: none;
+        font-family: frauncesLight;
+        font-size: 16pt;
+    }
+    .heading {
+        font-family: frauncesMed;
+        font-size: 30pt;
+        grid-area: heading;
+    }
+    
+    .tech{
+        font-family: frauncesItMed;
+        font-size: 20pt;
+    }
+    /*------------------- Competencies ---------------------*/
+    
+    
+    .comp {
+        font-family: FrauncesItHeavy;
+        font-size: 30pt;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+    }
+    .comp_list{
+        width: 95%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .comp_list h3 {
+        font-size: 16pt;
+    }
+    .comp_list li{
+        font-family: FrauncesItLight;
+        list-style: none;
+        font-size: 14pt;
+    }
+    
 }
 @media (min-width:1025px){ /* big lanscape tablets, laptops, and desktops */
     .nav-links li{
@@ -485,6 +669,55 @@ html {
         transition-duration: 400ms;
         transition-property: color;
     }
+        /*------------------- About ---------------------*/
+    
+        .abt{
+            height: 93vh;
+        }
+        .abt div{
+            height: 83vh;
+        }
+        .abt h1{
+            font-family: FrauncesItHeavy;
+            font-size: 40pt;
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            padding-left: 2vw;
+        }
+        .abt p{
+            font-family: FrauncesMed;
+            font-size: 20pt;
+        }
+        .about-pg {
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        
+        }
+        .p {
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+        
+        }
+        .img{
+            z-index: 0;
+            width: 35vw;
+        
+        }
+        .img img{
+            display: initial;
+            max-height: 70%;
+            border-radius: 10px;
+        }
+        
+        
+
 }
 @media (min-width:1281px){ /* hi-res laptops and desktops */
     .nav-links li{
@@ -504,6 +737,55 @@ html {
         transition-duration: 400ms;
         transition-property: color;
     }
+        /*------------------- About ---------------------*/
+    
+        .abt{
+            height: 93vh;
+        }
+        .abt div{
+            height: 83vh;
+        }
+        .abt h1{
+            font-family: FrauncesItHeavy;
+            font-size: 40pt;
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            padding-left: 2vw;
+        }
+        .abt p{
+            font-family: FrauncesMed;
+            font-size: 20pt;
+        }
+        .about-pg {
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        
+        }
+        .p {
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            padding: 100px;
+        
+        }
+        .img{
+            z-index: 0;
+            width: 35vw;
+        
+        }
+        .img img{
+            display: initial;
+            max-height: 75%;
+            border-radius: 10px;
+        }
+        
+        
+
 }
 @media (min-width:1700px){ /* hi-res laptops and desktops */
     nav {
@@ -610,12 +892,9 @@ html {
     
     }
     .img img{
+        display: initial;
         max-height: 75%;
         border-radius: 10px;
-
-        background-image:
-        linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
-        url('images/_MG_3222.JPG');    
     }
     
     
@@ -695,8 +974,7 @@ html {
     .proj_box {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: 1fr 2fr;
-        grid-auto-rows: minmax(100px, auto);
+        grid-template-rows: 100px auto;
         grid-template-areas: "heading heading" 
                              "desc tools";
         margin-bottom: 30px;
