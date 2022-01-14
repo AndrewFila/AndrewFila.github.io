@@ -152,7 +152,6 @@ html {
     color: var(--black);
     background-color: var(--white);
     overflow-x: hidden;
-
 }
 
 /*------------------- Nav bar ---------------------*/
@@ -1026,6 +1025,9 @@ html {
         justify-content: space-around;
         margin-top: 50px;
         margin-bottom: 100px;
+    }
+    .comp_list h3{
+        font-size: 25pt;
     }
     .comp_list li{
         font-family: FrauncesItLight;
