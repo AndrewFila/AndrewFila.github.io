@@ -1,0 +1,599 @@
+:root {
+    --black:    #100F0F;
+    --white:    #EFEFEF;
+    --splash:   #9E2B25;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+/*------------------------------------------------------- FONTS -------------------------------------------------------------------*/
+
+@font-face {
+    font-family: FrauncesHeavy;
+    src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 800, "SOFT" 100, "WONK" 1;
+}
+@font-face {
+    font-family: FrauncesItHeavy;
+    src: url(fonts/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 800, "SOFT" 100, "WONK" 1;
+}
+
+@font-face {
+    font-family: FrauncesMed;
+    src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 400, "SOFT" 100, "WONK" 1;
+}
+@font-face {
+    font-family: FrauncesItMed;
+    src: url(fonts/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 400, "SOFT" 100, "WONK" 1;
+}
+
+@font-face {
+    font-family: FrauncesLight;
+    src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 200, "SOFT" 100, "WONK" 1;
+}
+@font-face {
+    font-family: FrauncesItLight;
+    src: url(fonts/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 200, "SOFT" 100, "WONK" 1;
+}
+/*------------------------------------------------------- KEYFRAMES -------------------------------------------------------------------*/
+@keyframes slideLeft1 {
+    from {
+        transform: translateX(50%);
+        color: var(--splash);
+    }
+    50%{
+        transform: translateX(50%);
+        color: var(--splash);
+    }
+    to {
+        transform: translateX(0%);
+        color: var(--black);
+    }
+    
+}@keyframes slideLeft2 {
+    from {
+        transform: translateX(80%);
+        color: var(--splash);
+    }
+    50%{
+        transform: translateX(80%);
+        color: var(--splash);
+    }
+    to {
+        transform: translateX(0%);
+        color: var(--black);
+    }
+    
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+@keyframes hideScroll {
+    from {
+        overflow: hidden;
+    }
+    to {
+        overflow: hidden;
+    }
+}   
+@keyframes fadeToWhite {
+    from {
+        background-color: var(--black);
+        overflow: hidden;
+    }
+    25%{
+        background-color: var(--black);
+    }
+    to {
+        background-color: var(--white);
+        
+    }
+}
+@keyframes fadeToRed {
+    from {
+        background-color: var(--black);
+    }
+    25%{
+        background-color: var(--black);
+    }
+    to {
+        background-color: var(--splash);
+        
+    }
+}
+@keyframes FadeToBlack {
+    from {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+@keyframes quickSlideUp {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+
+}
+
+/*------------------------------------------------------- MAIN -------------------------------------------------------------------*/
+.spacer {
+    width: 100%;
+    height: 7vh;
+}
+
+html {
+    font-family: 'Fraunces';
+    color: var(--black);
+    background-color: var(--white);
+    overflow-x: hidden;
+
+}
+
+/*------------------- Nav bar ---------------------*/
+
+
+
+@media (min-width:320px){ /* Smartphones, protrait iPhone, protrait 480x320 phones */
+    nav {
+        top: 0;
+        position: fixed;
+        height: 7vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--splash);
+        
+    }
+    .logo {
+        padding-left: 5px;
+        font-family: FrauncesHeavy;
+        color: var(--black);
+        font-size: 10pt;
+    }
+    .nav-links ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 0px;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 10pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 10px;
+    }
+    .nav-links a:hover{
+        color: var(--white);
+        font-family: FrauncesItMed;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 10pt;
+    }
+}
+@media (min-width:480px){ /* smartphones, android phones, landscape iphone */
+    nav {
+        top: 0;
+        position: fixed;
+        height: 7vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--splash);
+        
+    }
+    .logo {
+        padding-left: 5px;
+        font-family: FrauncesHeavy;
+        color: var(--black);
+        font-size: 20pt;
+    }
+    .nav-links ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 0px;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 15pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 10px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 15pt;
+    }
+
+}
+@media (min-width:600px){ /* portrait tablets, portrait iPad, e-readers, lanscape 800x480 phones */
+    nav {
+        top: 0;
+        position: fixed;
+        height: 7vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--splash);
+        
+    }
+    .logo {
+        padding-left: 5px;
+        font-family: FrauncesHeavy;
+        color: var(--black);
+        font-size: 28pt;
+    }
+    .nav-links ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 0px;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 18pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 10px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 18pt;
+    }
+}
+@media (min-width:801px){ /* tablet, lanscape ipad, lo-res laptops and desktops */
+    .nav-links li{
+        list-style: none;
+        margin-right: 20px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 20pt;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 20pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+}
+@media (min-width:1025px){ /* big lanscape tablets, laptops, and desktops */
+    .nav-links li{
+        list-style: none;
+        margin-right: 20px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 20pt;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 20pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+}
+@media (min-width:1281px){ /* hi-res laptops and desktops */
+    .nav-links li{
+        list-style: none;
+        margin-right: 20px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 20pt;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 20pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+}
+@media (min-width:1700px){ /* hi-res laptops and desktops */
+    nav {
+        top: 0;
+        position: fixed;
+        height: 7vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--splash);
+        
+    }
+    .nav-links ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 40px;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 20px;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 20pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 20pt;
+    }
+    .logo {
+        padding-left: 10px;
+        font-family: FrauncesHeavy;
+        color: var(--black);
+        font-size: 30pt;
+    }
+
+    .nav-links a{
+        color: var(--black);
+        font-size: 20pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 20px;
+    }
+    .nav-links a:hover{
+        color: var(--white);
+        font-family: FrauncesItMed;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 20pt;
+    }
+    /*------------------- About ---------------------*/
+    
+    .abt{
+        height: 93vh;
+    }
+    .abt div{
+        height: 83vh;
+    }
+    .abt h1{
+        font-family: FrauncesItHeavy;
+        font-size: 40pt;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+    }
+    .abt p{
+        font-family: FrauncesMed;
+        font-size: 25pt;
+    }
+    .about-pg {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    
+    }
+    .p {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+    
+    }
+    .img{
+        z-index: 0;
+        width: 35vw;
+    
+    }
+    .img img{
+        max-height: 75%;
+        border-radius: 10px;
+
+        background-image:
+        linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+        url('images/_MG_3222.JPG');    
+    }
+    
+    
+    
+    /*------------------- Education ---------------------*/
+    
+    
+    .edu {
+        width: 100vw;
+        margin-bottom: 100px;
+    }
+    .edu h2{
+        font-family: FrauncesHeavy;
+        padding: 10px 10px 10px 100px;
+        font-size: 25pt;
+    
+    }
+    .education{
+        font-family: FrauncesItHeavy;
+        font-size: 40pt;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+    }
+    .edu_title {
+        width: 60vw;
+        padding: 50px 10px 50px 100px;
+    }
+    .edu_title h1{
+        font-family: FrauncesHeavy;
+        font-size: 35pt;
+        
+    }
+    .edu_title h3{
+        font-family: FrauncesItLight;
+        font-size: 23pt;
+    }
+    .class_list{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    .subject {
+        font-family: FrauncesMed;
+        font-size: 25pt;
+        list-style: none;
+    }
+    .class_list li{
+        font-family: FrauncesItLight;
+        list-style: none;
+        font-size: 20pt;
+    }
+    
+    
+    /*------------------- Portfolio ---------------------*/
+    .proj{
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .proj_grid {
+        width: 90vw;
+    }
+    .proj h1{
+        font-family: FrauncesItHeavy;
+        font-size: 40pt;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+    }
+    .proj_box {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: "heading heading" 
+                             "desc tools";
+        margin-bottom: 30px;
+    }
+    .desc {
+        grid-area: desc;
+        font-family: frauncesLight;
+        font-size: 20pt;
+        margin-right: 100px;
+    }
+    .desc a{
+        color: black;
+    }
+    .tools {
+        grid-area: tools;
+    }
+    
+    .tools li {
+        list-style: none;
+        font-family: frauncesLight;
+        font-size: 16pt;
+    }
+    .heading {
+        font-family: frauncesMed;
+        font-size: 30pt;
+        grid-area: heading;
+    }
+    
+    .tech{
+        font-family: frauncesItMed;
+        font-size: 20pt;
+    }
+    /*------------------- Competencies ---------------------*/
+    
+    
+    .comp {
+        font-family: FrauncesItHeavy;
+        font-size: 40pt;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+    }
+    .comp_list{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .comp_list li{
+        font-family: FrauncesItLight;
+        list-style: none;
+        font-size: 20pt;
+    }
+}

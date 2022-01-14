@@ -1,0 +1,785 @@
+:root {
+    --black:    #100F0F;
+    --white:    #EFEFEF;
+    --splash:   #9E2B25;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+/*------------------------------------------------------- FONTS -------------------------------------------------------------------*/
+
+@font-face {
+    font-family: FrauncesHeavy;
+    src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 800, "SOFT" 100, "WONK" 1;
+}
+@font-face {
+    font-family: FrauncesItHeavy;
+    src: url(fonts/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 800, "SOFT" 100, "WONK" 1;
+}
+
+@font-face {
+    font-family: FrauncesMed;
+    src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 400, "SOFT" 100, "WONK" 1;
+}
+@font-face {
+    font-family: FrauncesItMed;
+    src: url(fonts/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 400, "SOFT" 100, "WONK" 1;
+}
+
+@font-face {
+    font-family: FrauncesLight;
+    src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 200, "SOFT" 100, "WONK" 1;
+}
+@font-face {
+    font-family: FrauncesItLight;
+    src: url(fonts/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-variation-settings: "opsz" 9, "wght" 200, "SOFT" 100, "WONK" 1;
+}
+/*------------------------------------------------------- KEYFRAMES -------------------------------------------------------------------*/
+@keyframes slideLeft1 {
+    from {
+        transform: translateX(50%);
+        color: var(--splash);
+    }
+    50%{
+        transform: translateX(50%);
+        color: var(--splash);
+    }
+    to {
+        transform: translateX(0%);
+        color: var(--black);
+    }
+    
+}@keyframes slideLeft2 {
+    from {
+        transform: translateX(80%);
+        color: var(--splash);
+    }
+    50%{
+        transform: translateX(80%);
+        color: var(--splash);
+    }
+    to {
+        transform: translateX(0%);
+        color: var(--black);
+    }
+    
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+
+@keyframes hideScroll {
+    from {
+        overflow: hidden;
+    }
+    to {
+        overflow: hidden;
+    }
+}   
+@keyframes fadeToWhite {
+    from {
+        background-color: var(--black);
+        overflow: hidden;
+    }
+    25%{
+        background-color: var(--black);
+    }
+    to {
+        background-color: var(--white);
+        
+    }
+}
+@keyframes fadeToWhiteText {
+    from {
+        color: var(--black);
+        overflow: hidden;
+    }
+    25%{
+        color: var(--black);
+    }
+    to {
+        color: var(--white);
+        
+    }
+}
+@keyframes fadeToRed {
+    from {
+        background-color: var(--black);
+    }
+    25%{
+        background-color: var(--black);
+    }
+    to {
+        background-color: var(--splash);
+        
+    }
+}
+@keyframes FadeToBlack {
+    from {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+/*------------------------------------------------------- MAIN -------------------------------------------------------------------*/
+
+
+@media (max-width:320px){ /* Smartphones, protrait iPhone, protrait 480x320 phones */
+    .spacer {
+        width: 100%;
+        height: 7vh;
+    }
+    nav {
+        top: 0;
+        position: fixed;
+        height: 7vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--splash);
+        
+    }
+    .logo {
+        padding-left: 5px;
+        font-family: FrauncesHeavy;
+        color: var(--black);
+        font-size: 16pt;
+    }
+    .nav-links ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 0px;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 10pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 10px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 10pt;
+    }
+
+    .title {
+        animation: 2s ease-out 0s 1 fadeToWhite;
+        height: 93vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    
+    }
+    .title h1{
+        width: 50vw;
+        font-family: FrauncesHeavy;
+        font-size: 30pt;
+    }
+    .a {
+        margin-top: 15vh;
+        animation: 1s ease-out 0s 1 slideLeft1;
+    }
+    .f {
+        animation: 1s ease-out 0s 1 slideLeft2;
+    }
+    .title h2{
+        margin-top: 10vh;
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--black);
+        font-family: FrauncesMed;
+        font-size: 17pt;
+    }
+    .title h3{
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--splash);   
+        font-family: FrauncesItMed;
+        font-size: 12pt;
+    }
+    .social {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        font-size: 3rem;
+        margin-right: 1vw;
+    }
+    .social a{
+        animation: 2s ease-out 0s 1 FadeToBlack;
+        color: var(--black);
+    }
+    
+
+}
+@media (min-width:320px){ /* Smartphones, protrait iPhone, protrait 480x320 phones */
+    .spacer {
+        width: 100%;
+        height: 7vh;
+    }
+    nav {
+        top: 0;
+        position: fixed;
+        height: 7vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--splash);
+        
+    }
+    .logo {
+        padding-left: 5px;
+        font-family: FrauncesHeavy;
+        color: var(--black);
+        font-size: 16pt;
+    }
+    .nav-links ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 0px;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 10pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 10px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 10pt;
+    }
+
+    .title {
+        animation: 2s ease-out 0s 1 fadeToWhite;
+        height: 93vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    
+    }
+    .title h1{
+        width: 50vw;
+        font-family: FrauncesHeavy;
+        font-size: 30pt;
+    }
+    .a {
+        margin-top: 15vh;
+        animation: 1s ease-out 0s 1 slideLeft1;
+    }
+    .f {
+        animation: 1s ease-out 0s 1 slideLeft2;
+    }
+    .title h2{
+        margin-top: 10vh;
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--black);
+        font-family: FrauncesMed;
+        font-size: 17pt;
+    }
+    .title h3{
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--splash);   
+        font-family: FrauncesItMed;
+        font-size: 12pt;
+    }
+}
+@media (min-width:480px){ /* smartphones, android phones, landscape iphone */
+    .spacer {
+        width: 100%;
+        height: 7vh;
+    }
+    nav {
+        top: 0;
+        position: fixed;
+        height: 7vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--splash);
+        
+    }
+    .logo {
+        padding-left: 5px;
+        font-family: FrauncesHeavy;
+        color: var(--black);
+        font-size: 20pt;
+    }
+    .nav-links ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 0px;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 15pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 10px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 15pt;
+    }
+
+    .title {
+        animation: 2s ease-out 0s 1 fadeToWhite;
+        height: 93vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    
+    }
+    .title h1{
+        width: 50vw;
+        font-family: FrauncesHeavy;
+        font-size: 50pt;
+    }
+    .title h2{
+        margin-top: 10vh;
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--black);
+        font-family: FrauncesMed;
+        font-size: 21pt;
+    }
+    .title h3{
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--splash);   
+        font-family: FrauncesItMed;
+        font-size: 18pt;
+    }
+    .a {
+        margin-top: 15vh;
+        animation: 1s ease-out 0s 1 slideLeft1;
+    }
+    .f {
+        animation: 1s ease-out 0s 1 slideLeft2;
+    }
+
+}
+@media (min-width:600px){ /* portrait tablets, portrait iPad, e-readers, lanscape 800x480 phones */
+    .spacer {
+        width: 100%;
+        height: 7vh;
+    }
+    nav {
+        top: 0;
+        position: fixed;
+        height: 7vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--splash);
+        
+    }
+    .logo {
+        padding-left: 5px;
+        font-family: FrauncesHeavy;
+        color: var(--black);
+        font-size: 28pt;
+    }
+    .nav-links ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 0px;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 18pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 10px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 18pt;
+    }
+
+    .title {
+        animation: 2s ease-out 0s 1 fadeToWhite;
+        height: 93vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    
+    }
+    .title h1{
+        width: 50vw;
+        font-family: FrauncesHeavy;
+        font-size: 60pt;
+    }
+    .title h2{
+        margin-top: 10vh;
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--black);
+        font-family: FrauncesMed;
+        font-size: 21pt;
+    }
+    .title h3{
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--splash);   
+        font-family: FrauncesItMed;
+        font-size: 18pt;
+    }
+    .a {
+        margin-top: 15vh;
+        animation: 1s ease-out 0s 1 slideLeft1;
+    }
+    .f {
+        animation: 1s ease-out 0s 1 slideLeft2;
+    }
+}
+@media (min-width:801px){ /* tablet, lanscape ipad, lo-res laptops and desktops */
+    .spacer {
+        width: 100%;
+        height: 7vh;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 20px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 20pt;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 20pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .title {
+        animation: 2s ease-out 0s 1 fadeToWhite;
+        height: 93vh;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .title h1{
+        width: 40vw;
+        font-family: FrauncesHeavy;
+        font-size: 90pt;
+    }
+    .title h2{
+        margin-top: 30vh;
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--black);
+        font-family: FrauncesMed;
+        font-size: 23pt;
+    }
+    .title h3{
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--splash);   
+        font-family: FrauncesItMed;
+        font-size: 19pt;
+    }
+    .social {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        font-size: 3rem;
+        margin-right: 1vw;
+    }
+    .social a{
+        animation: 2s ease-out 0s 1 FadeToBlack;
+        color: var(--black);
+    }
+}
+@media (min-width:1025px){ /* big lanscape tablets, laptops, and desktops */
+    .spacer {
+        width: 100%;
+        height: 7vh;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 20px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 20pt;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 20pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .title {
+        animation: 2s ease-out 0s 1 fadeToWhite;
+        height: 93vh;
+        display: flex;
+        flex-direction: row;
+        align-items:flex-start;
+    }
+    .title h1{
+        width: 35vw;
+        font-family: FrauncesHeavy;
+        font-size: 130pt;
+    }
+    .title h2{
+        margin-top: 40vh;
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--black);
+        font-family: FrauncesMed;
+        font-size: 23pt;
+    }
+    .title h3{
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--splash);   
+        font-family: FrauncesItMed;
+        font-size: 20pt;
+    }
+    .social {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        font-size: 3rem;
+        margin-right: 1vw;
+    }
+    .social a{
+        animation: 2s ease-out 0s 1 FadeToBlack;
+        color: var(--black);
+    }
+}
+@media (min-width:1281px){ /* hi-res laptops and desktops */
+    .spacer {
+        width: 100%;
+        height: 7vh;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 20px;
+    }
+    .active {
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 20pt;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 20pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .title {
+        animation: 2s ease-out 0s 1 fadeToWhite;
+        height: 93vh;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .title h1{
+        width: 40vw;
+        font-family: FrauncesHeavy;
+        font-size: 150pt;
+    }
+    .title h2{
+        margin-top: 40vh;
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--black);
+        font-family: FrauncesMed;
+        font-size: 28pt;
+    }
+    .title h3{
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--splash);   
+        font-family: FrauncesItMed;
+        font-size: 22pt;
+    }
+    .social {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        font-size: 3rem;
+        margin-right: 1vw;
+    }
+    .social a{
+        animation: 2s ease-out 0s 1 FadeToBlack;
+        color: var(--black);
+    }
+}
+@media (min-width:1700px){ /* hi-res laptops and desktops */
+    nav {
+        animation: 2s ease-out 0s 1 fadeToRed;
+        top: 0;
+        position: fixed;
+        height: 7vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--splash);
+        
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 20px;
+    }
+    .nav-links a{
+        color: var(--black);
+        font-size: 20pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .active {
+        animation: 2s ease-out 0s 1 FadeToBlack;
+        color: var(--white);
+        font-family: FrauncesItMed;
+        font-size: 20pt;
+    }
+    .title {
+        animation: 2s ease-out 0s 1 fadeToWhite;
+        height: 93vh;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .title h1{
+        width: 50vw;
+        font-family: FrauncesHeavy;
+        font-size: 260pt;
+    }
+    .title h2{
+        margin-top: 50vh;
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--black);
+        font-family: FrauncesMed;
+        font-size: 40pt;
+    }
+    .title h3{
+        animation: 2s ease-out 0s 1 slideUp;
+        color: var(--splash);   
+        font-family: FrauncesItMed;
+        font-size: 30pt;
+    }
+    /****/
+    .spacer {
+        width: 100%;
+        height: 7vh;
+    }
+    
+    html {
+        font-family: 'Fraunces';
+        color: var(--black);
+        background-color: var(--white);
+        overflow-x: hidden;
+    }
+
+  
+    
+    .logo {
+        padding-left: 10px;
+        animation: 2s ease-out 0s 1 FadeToBlack;
+        font-family: FrauncesHeavy;
+        color: var(--black);
+        font-size: 30pt;
+    }
+    .a {
+        animation: 1s ease-out 0s 1 slideLeft1;
+    }
+    .f {
+        animation: 1s ease-out 0s 1 slideLeft2;
+    }
+    
+    
+    .nav-links ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 40px;
+    }
+    .nav-links a{
+        color: var(--black);
+        animation: 2s ease-out 0s 1 FadeToBlack;
+        font-size: 20pt;
+        text-decoration: none;
+        font-family: FrauncesLight;
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+    .nav-links li{
+        list-style: none;
+        margin-right: 20px;
+    }
+    .nav-links a:hover{
+        color: var(--white);
+        font-family: FrauncesItMed;
+    }
+    .social {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        font-size: 3rem;
+        margin-right: 1vw;
+    }
+    .social a{
+        animation: 2s ease-out 0s 1 FadeToBlack;
+        color: var(--black);
+    }
+}
